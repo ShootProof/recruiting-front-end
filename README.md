@@ -16,7 +16,7 @@ some other structure, but treat the test data as a given.
 - This exercise should not take you more than three hours to complete
 - Feel free to make this component as cool/interesting as you'd like, as long
   as it meets the technical requirements
-- You may use a JavaScript framework of your choice, or no framework &emdash;
+- You may use a JavaScript framework of your choice, or no framework &mdash;
   the choice is up to you
 - However, you may not rely on a module or library that already provides a
   similar tree component
