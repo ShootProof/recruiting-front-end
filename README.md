@@ -18,7 +18,7 @@ some other structure, but treat the test data as a given.
   as it meets the technical requirements
 - You may use a JavaScript framework of your choice, or no framework &mdash;
   the choice is up to you
-- However, you may not rely on a module or library that already provides a
+- However, you must not rely on a module or library that already provides a
   similar tree component
 - Your solution should be coded with reusability in mind
 - Submit a working set of code (ZIP, tarball, or link to JSFiddle, Plunker,
