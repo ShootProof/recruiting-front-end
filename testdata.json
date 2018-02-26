@@ -34,5 +34,23 @@
       "href": "https://picsum.photos/200/200/?random&d"
     },
     "parent": 1
+  },
+  {
+    "id": 4,
+    "name": "Node 4",
+    "thumbnail": {
+      "description": "rand(pix)",
+      "href": "https://picsum.photos/200/200/?random&e"
+    },
+    "parent": 5
+  },
+  {
+    "id": 5,
+    "name": "Node 5",
+    "thumbnail": {
+      "description": "pickPix <- rand",
+      "href": "https://picsum.photos/200/200/?random&f"
+    },
+    "parent": null
   }
 ]
