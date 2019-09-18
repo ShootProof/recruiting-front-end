@@ -1,11 +1,18 @@
 body {
   margin: 0;
-  text-align: center;
+  font-size: calc(10px + 2vmin);
   font-family: 'Lora', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: Consolas, "Courier New", monospace;
+  background-color: #282c34;
+  color: #eee;
+  text-shadow: 1px 0px 0 #4c525e;
+
+  main
+  {
+    code {
+      font-family: Consolas, "Courier New", monospace;
+    }
+  }
 }

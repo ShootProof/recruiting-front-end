@@ -1,14 +1,19 @@
 import React from 'react';
 
-import './App.scss';
+import './app.scss';
 import * as testData from './testdata.json';
 
 function App() {
   return (
-    <header>
-      <p>JSON data</p>
+    <article>
+      <header>
+        <p>JSON data</p>
+      </header>
       <code>{ JSON.stringify(testData) }</code>
-    </header>
+      <footer>
+
+      </footer>
+    </article>
   );
 }
 
