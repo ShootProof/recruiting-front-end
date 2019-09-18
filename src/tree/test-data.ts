@@ -1,4 +1,6 @@
-[
+import ITreeNode from "./tree-node";
+
+const testData: ITreeNode[] = [
   {
     "id": 0,
     "name": "Node 0",
@@ -54,3 +56,5 @@
     "parent": null
   }
 ]
+
+export default testData;
