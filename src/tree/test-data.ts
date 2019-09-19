@@ -1,6 +1,6 @@
-import ITreeNode from "./tree-node";
+import ITreeNodeDatum from "./tree-node-datum";
 
-const testData: ITreeNode[] = [
+const testData: ITreeNodeDatum[] = [
   {
     "id": 0,
     "name": "Node 0",

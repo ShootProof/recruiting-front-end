@@ -1,4 +1,4 @@
-export default interface ITreeNode
+export default interface ITreeNodeDatum
 {
   id: number;
   parent: number | null;
@@ -8,6 +8,6 @@ export default interface ITreeNode
     href: string;
   };
 
-  parentNode?: ITreeNode;
-  childNodes?: ITreeNode[];
+  parentNodeDatum?: ITreeNodeDatum;
+  childNodeData?: ITreeNodeDatum[];
 }

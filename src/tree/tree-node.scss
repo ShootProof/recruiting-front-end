@@ -1,0 +1,44 @@
+#app ul
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  li
+  {
+    list-style: none;
+
+    & + li
+    {
+      margin-top: .667em;
+    }
+
+    button
+    {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      width: 100%;
+      padding: 0;
+      border-radius: 3px;
+      text-align: left;
+
+      background-color: #5a6274;
+      color: #eee;
+
+      font-family: unset;
+      font-size: unset;
+      font-weight: bold;
+
+      img
+      {
+        width: 2em;
+        border-radius: 2px;
+        margin: .296em;
+      }
+    }
+  }
+}
