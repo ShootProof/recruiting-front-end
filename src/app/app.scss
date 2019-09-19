@@ -1,8 +1,7 @@
 article
 {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  place-items: stretch stretch;
-  justify-content: space-between;
+  code
+  {
+    font-family: 'Share Tech Mono', monospace;
+  }
 }

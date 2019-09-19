@@ -1,18 +1,61 @@
-body {
-  margin: 0;
+html
+{
   font-size: calc(10px + 2vmin);
   font-family: 'Lora', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
+body {
+  margin: 0;
   background-color: #282c34;
   color: #eee;
-  text-shadow: 1px 0px 0 #4c525e;
+  text-shadow: -1px -1px 0 #4c525e;
+}
 
-  main
+main
+{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  place-items: stretch stretch;
+  justify-content: space-between;
+
+  & > *
   {
-    code {
-      font-family: Consolas, "Courier New", monospace;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  & > header
+  {
+    h1
+    {
+      font-size: 2.25em;
+      letter-spacing: 0.0296em;
+      margin-top: .5em;
+      margin-bottom: .25em;
     }
+
+    h2
+    {
+      font-size: 1.5em;
+      letter-spacing: 0.0444em;
+      margin-top: .25em;
+      margin-bottom: .5em;
+    }
+  }
+
+  & > article
+  {
+    flex: auto;
+  }
+
+  & > footer
+  {
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: .667em;
   }
 }

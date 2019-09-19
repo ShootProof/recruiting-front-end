@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './app/app';
 
-const mainElements = document.getElementsByTagName('main');
-if (mainElements.length === 1)
+const appElement = document.getElementById('app');
+if (appElement)
 {
-    ReactDOM.render(<App />, mainElements[0]);
+    ReactDOM.render(<App />, appElement);
 }
