@@ -14,6 +14,11 @@ export default function TreeNode({ datum }: ITreeNodeParams) {
   const triggerClassName = 'trigger' + (clickable ? ' clickable' : '');
   const arrowSpan = clickable ? <span className="arrow">▶</span> : null;
 
+  const childNodes = datum.childNodeData && datum.childNodeData.map(tnd =>
+    <TreeNode key={tnd.id} datum={tnd} />
+  );
+  const childTree = childNodes && childNodes.length && <ul>{childNodes}</ul>;
+
   return (
     <li>
       <div className={triggerClassName}>
@@ -21,6 +26,7 @@ export default function TreeNode({ datum }: ITreeNodeParams) {
         <span>{datum.name}</span>
         {arrowSpan}
       </div>
+      {childTree}
     </li>
   );
 }
