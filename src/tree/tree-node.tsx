@@ -43,11 +43,11 @@ export default class TreeNode extends React.Component<ITreeNodeProps, ITreeNodeS
         const childNodes = datum.childNodeData && datum.childNodeData.map(tnd =>
             <TreeNode key={tnd.id} datum={tnd} />
         );
-        const childTree = childNodes && childNodes.length && <ul>{childNodes}</ul>;
+        const childTree = !childNodes || !childNodes.length || !isExpanded ? null : <ul>{childNodes}</ul>;
 
         return (
             <li>
-                <div className={triggerClassName}>
+                <div className={triggerClassName} onClick={this.toggleIsExpanded}>
                     <img src={datum.thumbnail.href} alt={datum.thumbnail.description} title={datum.thumbnail.description}></img>
                     <span>{datum.name}</span>
                     {arrowSpan}
@@ -55,5 +55,12 @@ export default class TreeNode extends React.Component<ITreeNodeProps, ITreeNodeS
                 {childTree}
             </li>
         );
+    }
+
+    private toggleIsExpanded = () =>
+    {
+        this.setState(previousState => ({
+            isExpanded: !previousState.isExpanded
+        }));
     }
 }
