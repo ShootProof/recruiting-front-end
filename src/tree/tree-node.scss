@@ -63,7 +63,13 @@
             span.arrow
             {
                 margin-left: 0.5em;
+                transition: transform .25s ease-out;
             }
+        }
+
+        &.expanded > div.trigger > span.arrow
+        {
+            transform: rotate(90deg);
         }
     }
 }
