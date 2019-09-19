@@ -1,69 +1,69 @@
 #app ul
 {
-  display: flex;
-  margin-top: .667em;
-  margin-left: 0;
-  margin-bottom: 0;
-  margin-right: 0;
-  padding-top: 0;
-  padding-left: 3em;
-  padding-bottom: 0;
-  padding-right: 0;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
+    display: flex;
+    margin-top: 0.667em;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    padding-top: 0;
+    padding-left: 3em;
+    padding-bottom: 0;
+    padding-right: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
 
-  li
-  {
-    list-style: none;
-
-    & + li
+    li
     {
-      margin-top: .667em;
+        list-style: none;
+
+        & + li
+        {
+            margin-top: 0.667em;
+        }
+
+        div.trigger
+        {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            text-align: left;
+            font-weight: bold;
+            user-select: none;
+
+            background-color: #ddd;
+            color: #222;
+
+            border-style: outset;
+            border-color: #bbb;
+            border-width: 2px;
+            border-radius: 3px;
+
+            &.clickable
+            {
+                cursor: pointer;
+
+                &:active
+                {
+                    border-style: inset;
+                    transform: translate(1px, 1px);
+                }
+            }
+
+            img
+            {
+                width: 2em;
+                border-radius: 2px;
+                margin: 0.296em;
+            }
+
+            span.arrow
+            {
+                margin-left: 0.5em;
+            }
+        }
     }
-
-    div.trigger
-    {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-
-      text-align: left;
-      font-weight: bold;
-      user-select: none;
-
-      background-color: #ddd;
-      color: #222;
-
-      border-style: outset;
-      border-color: #bbb;
-      border-width: 2px;
-      border-radius: 3px;
-
-      &.clickable
-      {
-          cursor: pointer;
-
-          &:active
-          {
-            border-style: inset;
-            transform: translate(1px, 1px);
-          }
-      }
-
-      img
-      {
-        width: 2em;
-        border-radius: 2px;
-        margin: .296em;
-      }
-
-      span.arrow
-      {
-        margin-left: .5em;
-      }
-    }
-  }
 }
