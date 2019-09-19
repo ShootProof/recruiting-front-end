@@ -10,12 +10,17 @@ interface ITreeNodeParams
 }
 
 export default function TreeNode({ datum }: ITreeNodeParams) {
+  const clickable = !!datum.childNodeData && datum.childNodeData.length > 0;
+  const triggerClassName = 'trigger' + (clickable ? ' clickable' : '');
+  const arrowSpan = clickable ? <span className="arrow">▶</span> : null;
+
   return (
     <li>
-      <button>
+      <div className={triggerClassName}>
         <img src={datum.thumbnail.href} alt={datum.thumbnail.description} title={datum.thumbnail.description}></img>
         <span>{datum.name}</span>
-      </button>
+        {arrowSpan}
+      </div>
     </li>
   );
 }

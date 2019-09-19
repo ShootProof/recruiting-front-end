@@ -1,10 +1,10 @@
 import React from 'react';
 
-import TreeNode from '../tree/tree-node';
-import ITreeNodeDatum from '../tree/tree-node-datum';
-import testData from '../tree/test-data';
+import TreeNode from './tree/tree-node';
+import ITreeNodeDatum from './tree/tree-node-datum';
+import testData from './tree/test-data';
 
-import './app.scss';
+import './tree/tree-node.scss';
 
 const treeNodeData = buildTreeNodeData(testData);
 const treeNodes = treeNodeData.map(tnd =>
