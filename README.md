@@ -1,10 +1,9 @@
 # Overview
 
 Here at ShootProof, we prefer to have a good idea of a candidate's technical
-experience before proceeding with our in-office interview portion of the
-process.  We believe that the technical exercise below will illustrate a
+knowledge and experience before proceeding with our in-office interview portion
+of the process.  We believe that the technical exercise below will illustrate a
 candidate's approach to building reusable components using JavaScript and CSS.
-
 # Guidelines
 
 Goal: Create a navigable tree component using our provided set of test data.
@@ -13,20 +12,18 @@ The test data is a flat structure with parent ID pointers. You may choose to use
 the data structure as-is, or have a function transform the data structure into
 some other structure, but treat the test data as a given.
 
-- This exercise should not take you more than three hours to complete
-- Feel free to make this component as cool/interesting as you'd like, as long
-  as it meets the technical requirements
-- You may use a JavaScript framework of your choice, or no framework &mdash;
-  the choice is up to you
-- However, you must not rely on a module or library that already provides a
-  similar tree component
-- Your solution should be coded with reusability in mind
-- Submit a working set of code (ZIP, tarball, or link to JSFiddle, Plunker,
-  GitHub pull request, etc.)
+- This exercise should take you a few hours to complete, and you are encouraged to take as much time as you feel is necessary.
+- Feel free to make this component as cool/interesting as you'd like, as long as it meets the technical requirements. This is your opportunity to show off your skills and knowledge.
+- We'd prefer to see usage of a modern component-based JavaScript framework of your choice (React, Vue, Angular, etc.), but we will consider vanilla submissions as well
+- You should utilize ES6+ syntax (or Typescript) targeting modern browsers
+- You should avoid using any runtime dependencies which provide a similar tree-like structure
+- Your solution should be coded with reusability and maintainability in mind. We'd like to see what your code would look like in a production-like environment.
+- We'd prefer you to submit the exercise as a pull request to this repository, but will also accept a .ZIP archive or link to an online code editor (JSFiddle, etc.)
   - A working, compiled set of code in a single directory that can be opened in a browser
+  - Instructions for running any build or test steps, as well as any clarification or justification you'd like to provide
   - All source code
 
-# Technical Requirements
+# Functional Requirements
 
 - A complete submission will:
   - Only show the expander UI element for nodes that contain children
@@ -42,6 +39,6 @@ The end result should look something similar to what's shown below:
 
 # Test Data
 
-You will find the test data in this repository under `testdata.json`. You can 
-copy it into your code directly, or use HTTP to get the content of that data
+You will find the test data in this repository under `testdata.json`. You can
+copy it into your code directly, or request the content of the test data
 directly from GitHub if you prefer.
