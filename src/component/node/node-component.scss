@@ -1,0 +1,125 @@
+.card{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+
+  background: whitesmoke;
+  border-radius: 10px;
+  width: 50%;
+  height: 5%;
+  padding: 1%;
+  margin: 2%;
+
+  -webkit-box-shadow: 0 7px 34px -15px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 7px 34px -15px rgba(0,0,0,0.75);
+  box-shadow: 0 7px 34px -15px rgba(0,0,0,0.75);
+
+  transition-delay: 0.2s;
+  transition: 0.2s ease-out;
+
+  animation: fadein 1s;
+  -moz-animation: fadein 1s; /* Firefox */
+  -webkit-animation: fadein 1s; /* Safari and Chrome */
+  -o-animation: fadein 1s; /* Opera */
+
+  &:hover{
+    //sinking effect on hover
+    -webkit-box-shadow: 0px 0px 21px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 21px -7px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 21px -7px rgba(0,0,0,0.75);
+  }
+
+  .inline{
+    // force elements to align next to one another with a specific width
+    display: inline-block;
+
+    &.content{
+      max-width: 7vw;
+      min-width: 7vw;
+    }
+  }
+
+  .vertical-center{
+    transform: translateY(-50%);
+  }
+
+  &.pointer{
+    // set cursor on hover
+    cursor: pointer;
+
+    &:hover{
+      // elevate when hoveredq
+      -webkit-box-shadow: 0px 10px 30px -4px rgba(0,0,0,0.5);
+      -moz-box-shadow: 0px 10px 30px -4px rgba(0,0,0,0.5);
+      box-shadow: 0px 10px 30px -4px rgba(0,0,0,0.5);
+    }
+  }
+
+  .title{
+    padding: 3% 0 0 0;
+  }
+
+  img{
+    max-width: 31%;
+    border-radius: 50px;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity:0;
+    transform: translate(0, -50px);
+  }
+  to {
+    opacity:1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes fadein-side {
+  from {
+    opacity:0;
+    transform: translate(-50px, -50px);
+  }
+  to {
+    opacity:1;
+    transform: translate(0px, 0px);
+  }
+}
+
+.child{
+  margin-left: 5%;
+
+  &.node{
+    .card{
+      animation: fadein-side .5s;
+      -moz-animation: fadein-side .5s; /* Firefox */
+      -webkit-animation: fadein-side .5s; /* Safari and Chrome */
+      -o-animation: fadein-side .5s; /* Opera */
+    }
+  }
+}
+
+.hidden{
+  display: none;
+}
+
+.expander{
+  transition: 0.15s ease-out;
+  width: 3%;
+
+  &.vertical-center{
+    transform: translate(0%, -50%);
+  }
+
+  &.rot-90-cw{
+    transform-origin: 50% 50%;
+    transform: rotate(90deg);
+
+    &.vertical-center{
+      transform: translate(0%, -50%) rotate(90deg);
+    }
+  }
+}
+
+
+

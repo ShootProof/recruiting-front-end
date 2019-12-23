@@ -1,44 +1,22 @@
-# Overview
+##Exercise to create a tree component with arbitrary depth in React
+To run locally run the following commands from the project directory:
+####npm I
 
-Here at ShootProof, we prefer to have a good idea of a candidate's technical
-knowledge and experience before proceeding with our in-office interview portion
-of the process.  We believe that the technical exercise below will illustrate a
-candidate's approach to building reusable components using JavaScript and CSS.
-# Guidelines
+####npm run-script build
 
-Goal: Create a navigable tree component using our provided set of test data.
+####npm install -g serve
 
-The test data is a flat structure with parent ID pointers. You may choose to use
-the data structure as-is, or have a function transform the data structure into
-some other structure, but treat the test data as a given.
+####serve -s build
 
-- This exercise should take you a few hours to complete, but you are encouraged to take as much time as you feel is necessary.
-- Feel free to make this component as cool/interesting as you'd like as long as it meets the functional requirements. This is your opportunity to show off your skills and knowledge.
-- We'd prefer to see usage of a modern component-based JavaScript framework of your choice (React, Vue, Angular, etc.), but we will consider vanilla submissions as well
-- You should utilize ES6+ syntax (or Typescript) targeting modern browsers
-- You should avoid using any runtime dependencies which provide a similar tree-like structure
-- Keep in mind that this submission should reflect what your code would look like in a production-like environment.
-- We'd prefer you to submit the exercise as a pull request to this repository, but will also accept a .ZIP archive or link to an online code editor (JSFiddle, etc.)
-  - A working, compiled set of code in a single directory that can be opened in a browser
-  - Instructions for running any build or test steps along with any any clarification or justification you'd like to provide
-  - All source code
+##Justification
+I wanted to abstract the call to retrieve the data so that if this component were to be used in production, we are not limited to reading from a file. I did this by creating a data service that is instantiated in the parent tree component. getData() is called on this class which returns a NodeTreeModel object. The assumption here being that whatever implementation is used, the service will have a getData() function that returns a NodeTreeModel. Using typings from Typescript, as long as all code that cares about the data is working with the NodeTreeModel, NodeModel, etc. the actual implementation of getData() is irrelevant. I believe this provides a level of abstraction that will make the component easier to extend and maintain.
 
-# Functional Requirements
+The ux for this component is fairly straightforward and simple. Rounded corners and soft shapes are combined with white, black, gray, and blue to create a minimal, calming effect. Smooth animation attempts to accomplish the same calming simplicity through directional motion and fades. Finally, all nodes react to mouse hover. The nodes with no children have a subtle sinking effect whereas the nodes with children raise up when hovered. 
 
-- A complete submission will:
-  - Only show the expander UI element for nodes that contain children
-  - Only turn the cursor into a pointer for nodes with children
-  - Click a node to expand it
-  - Use of a webfont (any font of your choice)
-  - Text and icons should be vertically centered within each tree node
-  - Images should have data-driven alt text shown on hover
+###Changes and improvements
+I wanted to roll my own styles for this component to avoid large dependency packages if this component were to be used as a library. All of the pieces are there. However, I neglected to use flexbox or some other responsive paradigm so at smaller screen sizes the look is not ideal.
 
-The end result should look something similar to what's shown below:
+On close, the nodes do not animate. This was a conscious choice to avoid the UI feeling sluggish. Feedback is needed to determine if this is the right choice. If the decision to animate on close was made, child nodes would need some mechanism to know if their parent node was open or not. Additionally instead of removing child nodes from the DOM, they would most likely need to be hidden and have their height animated to zero with no overflow to give the illusion of disappearing.
 
-![Working Example of Tree Component](/example.gif)
+Finally, I began setting up tests for the component but ran out of time with family obligations and travel. The skeleton is there but with no actual tests.
 
-# Test Data
-
-You will find the test data in this repository under `testdata.json`. You can
-copy it into your code directly, or request the content of the test data
-directly from GitHub if you prefer.
