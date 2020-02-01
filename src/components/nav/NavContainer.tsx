@@ -38,7 +38,7 @@ class NavContainer extends React.Component<TNavProps, TNavState> {
     return (
       <>
         {!subNav && (
-          <div className="nav-root-container" key={navContent.id}>
+          <div className="nav-root-container" data-testid="nav-root-container" key={navContent.id}>
             <NavView navContent={navContent} isExpand={expand} toggleExpandFn={this.toggleExpand} />
             {navContent.child && this.renderChildren(navContent)}
           </div>

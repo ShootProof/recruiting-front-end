@@ -8,12 +8,9 @@ afterEach(cleanup);
 
 describe('<AppView />', () => {
   test('renders App View', () => {
-    const { getByTestId } = render(<App />);
-    expect(getByTestId('AppView')).toBeTruthy();
-  });
-
-  test('transform the json into a useable navigation', () => {
-    const results = false;
-    expect(results).toBe(true);
+    const { getByTestId, getAllByTestId, getByText } = render(<App />);
+    expect(getByTestId('app-view')).toBeTruthy();
+    expect(getByText(/Anselm's Node Navigation/)).toBeTruthy();
+    expect(getAllByTestId('nav-root-container')).toBeTruthy();
   });
 });

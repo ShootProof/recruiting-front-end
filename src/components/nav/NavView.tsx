@@ -11,7 +11,7 @@ const getExpandClass = (isExpand: boolean) => (
 const Nav = (props: TNavProps) => {
   const { navContent } = props;
   return (
-    <div className="nav-container">
+    <div className="nav-container" data-testid={navContent.id}>
       <img
         src={navContent.thumbnail.href}
         title={navContent.thumbnail.description}
@@ -19,7 +19,7 @@ const Nav = (props: TNavProps) => {
         className="nav-thumbnail"
       />
       <div>{navContent.name}</div>
-      {navContent.child && <div className="caret"></div>}
+      {navContent.child && <div className="caret" data-testid={`${navContent.id}-nav-caret`}></div>}
     </div>
   );
 };
@@ -29,7 +29,7 @@ const NavView = (props: TNavViewProps) => {
   return (
     <>
       {navContent.child && (
-        <div className={`div-button ${getExpandClass(isExpand)}`} role="button" onClick={() => toggleExpandFn()}>
+        <div data-testid={`${navContent.id}-button`} className={`div-button ${getExpandClass(isExpand)}`} role="button" onClick={() => toggleExpandFn()}>
           <Nav navContent={navContent} />
         </div>
       )}
