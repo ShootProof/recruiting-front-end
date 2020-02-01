@@ -8,30 +8,46 @@
     position: absolute;
     width: 0;
     height: 0;
-    border: 10px solid transparent;
+    border: 5px solid transparent;
     border-top-color: $blackColor;
-    right: $contentSpacing;
+    right: $contentSpacingLarge;
+    transition: transform 0.5s ease;
+    transform: rotate(0deg);
   }
 }
 
-.not-expand {
-  +.nav-sub-container {
-    display: none;
-  }
+.nav-root-container {
+  background-color: $medGreyColor;
+  border-radius: 10px;
+  margin-bottom: $contentSpacing;
 }
 
 .nav-container {
-  border: 1px solid red;
-  border-radius: 10px;
   display: flex;
   vertical-align: middle;
   align-items: center;
   padding: 10px;
 
   img {
-    margin-right: 5px;
+    margin-right: $contentSpacing;
     border-radius: 10px;
     width: 100px;
     height: 100px;
+  }
+}
+
+.nav-sub-container {
+  // transition: opacity 1.5s linear;
+  // opacity: 1;
+}
+
+.not-expand {
+  +.nav-sub-container {
+    // opacity: 0;
+    display: none;
+  }
+
+  .caret {
+    transform: rotate(90deg);
   }
 }

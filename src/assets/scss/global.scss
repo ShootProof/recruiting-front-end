@@ -15,15 +15,25 @@ body {
 }
 
 body {
-  margin: $contentSpacing $contentSpacing 0;
+  margin: 0 $contentSpacing;
 }
 
 main {
   width: 100%;
 }
 
+header {
+  background-color: $heavyDarkColor;
+  color: $lightColor;
+  margin-left: -$contentSpacing;
+  margin-right: -$contentSpacing;
+  margin-bottom: $contentSpacing;
+  padding: $contentSpacing;
+  text-align: center;
+}
+
 .container-fluid {
-  min-width: 660px;
+  min-width: 400px;
   max-width: 1400px;
   margin: 0 auto;
 }
