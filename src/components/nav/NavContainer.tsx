@@ -8,6 +8,13 @@ import NavView from './NavView';
 class NavContainer extends React.Component<TNavProps, TNavState> {
   state = NavState;
 
+  componentDidMount() {
+    const { navContent } = this.props;
+    if (navContent.child && navContent.parent !== null) {
+      this.toggleExpand();
+    }
+  }
+
   toggleExpand = () => {
     const { expand } = this.state;
     this.setState({

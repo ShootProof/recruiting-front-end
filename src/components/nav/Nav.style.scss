@@ -1,0 +1,31 @@
+@import '../../assets/scss/variables.scss';
+
+.div-button {
+  cursor: pointer;
+  position: relative;
+
+  .caret {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: $blackColor;
+    right: $contentSpacing;
+  }
+}
+
+.nav-container {
+  border: 1px solid red;
+  border-radius: 10px;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  padding: 10px;
+
+  img {
+    margin-right: 5px;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+  }
+}

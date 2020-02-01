@@ -1,0 +1,25 @@
+/*
+*********************************
+*** General
+*********************************
+*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $lightBgColor;
+  font-size: $fontSize;
+  font-family: $fontFamily;
+  color: $textColor;
+}
+
+main {
+  width: 100%;
+}
+
+.container-fluid {
+  min-width: 660px;
+  max-width: 1400px;
+  margin: 0 $contentSpacing;
+}
