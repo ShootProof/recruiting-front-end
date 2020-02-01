@@ -4,6 +4,8 @@ import React from 'react';
 import NavState from './Nav.state';
 import { TNavProps, TNavState } from './Nav.type';
 import NavView from './NavView';
+/* Type */
+import { TJsonObject } from '../../types/general.type';
 
 class NavContainer extends React.Component<TNavProps, TNavState> {
   state = NavState;
@@ -22,10 +24,34 @@ class NavContainer extends React.Component<TNavProps, TNavState> {
     });
   }
 
+  renderChildren = (el: TJsonObject) => (
+    el.child.map((obj: any): JSX.Element => (
+      <div className="nav-sub-container" key={obj.id}>
+        <NavContainer navContent={obj} subNav={true} />
+      </div>
+    ))
+  );
+
   render() {
     const { expand } = this.state;
-    const { navContent } = this.props;
-    return <NavView navContent={navContent} isExpand={expand} toggleExpandFn={this.toggleExpand} />;
+    const { navContent, subNav } = this.props;
+    return (
+      <>
+        {!subNav && (
+          <div className="nav-root-container" key={navContent.id}>
+            <NavView navContent={navContent} isExpand={expand} toggleExpandFn={this.toggleExpand} />
+            {navContent.child && this.renderChildren(navContent)}
+          </div>
+        )}
+
+        {subNav && (
+          <>
+            <NavView navContent={navContent} isExpand={expand} toggleExpandFn={this.toggleExpand} />
+            {navContent.child && this.renderChildren(navContent)}
+          </>
+        )}
+      </>
+    );
   }
 }
 

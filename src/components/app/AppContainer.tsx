@@ -61,9 +61,9 @@ class AppContainer extends React.Component<TAppProps, TAppState> {
 
     return (
       <div className="app container-fluid" data-testid="AppView">
-        {navigation.map((el: TJsonObject): JSX.Element => {
-          return <NavContainer key={el.id} navContent={el} />;
-        })}
+        {navigation.map((el: TJsonObject): JSX.Element => (
+          <NavContainer key={el.id} navContent={el} />
+        ))}
       </div>
     );
   }

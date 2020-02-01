@@ -2,6 +2,7 @@
 import { TJsonObject } from '../../types/general.type';
 
 export type TNavProps = {
+  subNav?: boolean;
   navContent: TJsonObject;
 }
 

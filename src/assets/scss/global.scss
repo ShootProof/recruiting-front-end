@@ -14,6 +14,10 @@ body {
   color: $textColor;
 }
 
+body {
+  margin: $contentSpacing $contentSpacing 0;
+}
+
 main {
   width: 100%;
 }
@@ -21,5 +25,5 @@ main {
 .container-fluid {
   min-width: 660px;
   max-width: 1400px;
-  margin: 0 $contentSpacing;
+  margin: 0 auto;
 }

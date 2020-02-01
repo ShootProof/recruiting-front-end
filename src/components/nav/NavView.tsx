@@ -2,7 +2,6 @@
 import React from 'react';
 /* Component Content */
 import { TNavProps, TNavViewProps } from './Nav.type';
-import NavContainer from './NavContainer';
 import './Nav.style.scss';
 
 const getExpandClass = (isExpand: boolean) => (
@@ -13,7 +12,12 @@ const Nav = (props: TNavProps) => {
   const { navContent } = props;
   return (
     <div className="nav-container">
-      <img src={navContent.thumbnail.href} title={navContent.thumbnail.description} alt={navContent.thumbnail.description} className="nav-thumbnail" />
+      <img
+        src={navContent.thumbnail.href}
+        title={navContent.thumbnail.description}
+        alt={navContent.thumbnail.description}
+        className="nav-thumbnail"
+      />
       <div>{navContent.name}</div>
       {navContent.child && <div className="caret"></div>}
     </div>
@@ -29,10 +33,6 @@ const NavView = (props: TNavViewProps) => {
           <Nav navContent={navContent} />
         </div>
       )}
-
-      {isExpand && navContent.child && navContent.child.map((el): JSX.Element => (
-        <NavContainer key={el.id} navContent={el} />
-      ))}
 
       {!navContent.child && (
         <Nav navContent={navContent} />
