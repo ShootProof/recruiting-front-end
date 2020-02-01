@@ -2,14 +2,17 @@
 import React from 'react';
 /* Data */
 import testJSON from '../../data/testData.json';
+/* Component */
+import NavContainer from '../nav';
 /* Component Content */
 import AppState from './App.state';
 import {
-  TJsonObject,
   TAppProps,
   TAppState,
 } from './App.type';
 import './App.css';
+/* Type */
+import { TJsonObject } from '../../types/general.type';
 
 class AppContainer extends React.Component<TAppProps, TAppState> {
   state = AppState;
@@ -54,9 +57,13 @@ class AppContainer extends React.Component<TAppProps, TAppState> {
   }
 
   render() {
+    const { navigation } = this.state;
+
     return (
       <div className="App" data-testid="AppView">
-        {/* <DropdownContainer /> */}
+        {navigation.map((el: TJsonObject): JSX.Element => {
+          return <NavContainer key={el.id} navContent={el} />;
+        })}
       </div>
     );
   }
