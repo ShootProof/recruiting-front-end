@@ -43,6 +43,7 @@
     "scripts",
     "**/*.test.ts",
     "**/*.test.tsx",
-    "__mocks__"
+    "__mocks__",
+    "__snapshots__"
   ]
 }
