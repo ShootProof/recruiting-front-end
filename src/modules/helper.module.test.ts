@@ -1,5 +1,5 @@
 /* Module */
-import { transformNavJSON } from './helper.module';
+import transformNavJSON from './helper.module';
 /* Type */
 import testData from '../data/testData.json';
 

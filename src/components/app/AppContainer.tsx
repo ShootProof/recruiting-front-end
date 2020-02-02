@@ -11,7 +11,7 @@ import {
   TAppState,
 } from './App.type';
 /* Module */
-import { transformNavJSON } from '../../modules/helper.module';
+import transformNavJSON from '../../modules/helper.module';
 /* Type */
 import { TJsonObject } from '../../types/general.type';
 
@@ -30,7 +30,7 @@ class AppContainer extends React.Component<TAppProps, TAppState> {
     return (
       <>
         <header>
-          <div>Anselm's Node Navigation</div>
+          <div>Anselm&apos;s Node Navigation</div>
         </header>
         <div className="container-fluid" data-testid="app-view">
           {navigation.map((el: TJsonObject): JSX.Element => (

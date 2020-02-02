@@ -29,7 +29,12 @@ const NavView = (props: TNavViewProps) => {
   return (
     <>
       {navContent.child && (
-        <div data-testid={`${navContent.id}-button`} className={`div-button ${getExpandClass(isExpand)}`} role="button" onClick={() => toggleExpandFn()}>
+        <div
+          data-testid={`${navContent.id}-button`}
+          className={`div-button ${getExpandClass(isExpand)}`}
+          role="button"
+          onClick={() => toggleExpandFn()}
+        >
           <Nav navContent={navContent} />
         </div>
       )}

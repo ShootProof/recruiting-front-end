@@ -1,8 +1,20 @@
 @import '../../assets/scss/variables.scss';
 
+.nav-root-container {
+  background-color: $medGreyColor;
+  border-radius: 10px;
+  margin-bottom: $contentSpacing;
+  overflow: hidden;
+}
+
 .div-button {
   cursor: pointer;
   position: relative;
+  transition: background-color 0.5s linear;
+
+  &:hover {
+    background-color: $lightBgColor2;
+  }
 
   .caret {
     position: absolute;
@@ -16,17 +28,12 @@
   }
 }
 
-.nav-root-container {
-  background-color: $medGreyColor;
-  border-radius: 10px;
-  margin-bottom: $contentSpacing;
-}
-
 .nav-container {
   display: flex;
   vertical-align: middle;
   align-items: center;
   padding: 10px;
+  border-bottom: 1px solid $lightGreyColor2;
 
   img {
     margin-right: $contentSpacing;
@@ -36,18 +43,18 @@
   }
 }
 
-.nav-sub-container {
-  // transition: opacity 1.5s linear;
-  // opacity: 1;
-}
-
 .not-expand {
   +.nav-sub-container {
-    // opacity: 0;
     display: none;
   }
 
   .caret {
     transform: rotate(90deg);
   }
+}
+
+.nav-sub-container>.nav-container:last-child,
+.nav-root-container>.nav-container:last-child,
+.not-expand .nav-container {
+  border: 0;
 }

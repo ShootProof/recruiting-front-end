@@ -11,11 +11,11 @@ const transformNavJSON = (orgJSON: TJsonObject[]): TJsonObject[] => {
   const jsonLength = sortedJSON.length - 1;
 
   // looping the array in reverse
-  for (let loop = jsonLength; loop > -1; loop--) {
+  for (let loop = jsonLength; loop > -1; loop -= 1) {
     const currentLoop = sortedJSON[loop];
 
     // going through each looped element to see if it should be a child
-    for (let loop2 = 0; loop2 < jsonLength; loop2++) {
+    for (let loop2 = 0; loop2 < jsonLength; loop2 += 1) {
       const currentJSON = sortedJSON[loop2];
       if (currentLoop.parent === currentJSON.id) {
         if (!currentJSON.child) {
@@ -34,6 +34,4 @@ const transformNavJSON = (orgJSON: TJsonObject[]): TJsonObject[] => {
   return finalJSON.sort((a: TJsonObject, b: TJsonObject) => a.id - b.id);
 };
 
-export {
-  transformNavJSON,
-};
+export default transformNavJSON;

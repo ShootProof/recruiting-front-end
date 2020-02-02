@@ -6,21 +6,23 @@ import NavContainer from './NavContainer';
 /* Data */
 import testJSON from '../../data/testData.json';
 /* Module */
-import { transformNavJSON } from '../../modules/helper.module';
+import transformNavJSON from '../../modules/helper.module';
+/* Type */
+import { TJsonObject } from '../../types/general.type';
 
 const renderContent = () => {
   const navigation = transformNavJSON(testJSON);
   return render(
     navigation.map((el: TJsonObject): JSX.Element => (
       <NavContainer key={el.id} navContent={el} />
-    ))
+    )),
   );
 };
 
 afterAll(cleanup);
 
 describe('<NavContainer />', () => {
-  test('content is disaplyed correctly', () => {
+  test('content is displayed correctly', () => {
     const {
       container,
       getByTestId,

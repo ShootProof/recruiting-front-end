@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-boolean-value */
 /* Node Module */
 import React from 'react';
 /* Component Content */
