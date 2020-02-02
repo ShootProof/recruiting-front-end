@@ -2,11 +2,11 @@
 
 For this project I used these technologies:
 
-React
-TypeScript
-React Testing Library
-Jest
-ESLint
+React<br />
+TypeScript<br />
+React Testing Library<br />
+Jest<br />
+ESLint<br />
 SCSS
 
 In the project directory, you can run:
@@ -36,5 +36,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run lint`
 
-Analyzes the the codebase to check on issues on coding standards.
+Analyzes the the codebase to check on issues on coding standards.<br />
 FYI: There are two that didn't get a chance to work on
