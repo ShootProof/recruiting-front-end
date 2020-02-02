@@ -16,7 +16,7 @@
     ],
     "sourceMap": true,
     "allowJs": false,
-    "jsx": "react-native",
+    "jsx": "react",
     "moduleResolution": "node",
     "rootDir": "src",
     "baseUrl": "src",
