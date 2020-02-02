@@ -1,6 +1,6 @@
 ## Anselm's Node Navigation
 
-For this project I used these technologies:
+For this project I used these technologies/libraries:
 
 React<br />
 TypeScript<br />
