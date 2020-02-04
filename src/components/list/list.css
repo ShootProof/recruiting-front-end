@@ -1,0 +1,27 @@
+ul.list {
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 0px; }
+  ul.list ul {
+    margin-left: 30px; }
+  ul.list li {
+    margin-left: 0px;
+    padding-left: 0px; }
+
+.content {
+  background-color: #cccccc;
+  margin: 2px; }
+  .content.parent {
+    cursor: pointer; }
+    .content.parent::after {
+      content: "\2BC8"; }
+    .content.parent.expanded::after {
+      content: "\2BC6"; }
+  .content .title {
+    padding: 5px;
+    vertical-align: middle; }
+  .content img {
+    height: 20px;
+    width: 20px;
+    padding: 5px;
+    vertical-align: middle; }

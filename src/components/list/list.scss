@@ -1,0 +1,47 @@
+$thumb-dimension: 20px;
+$thumb-padding: 5px;
+
+ul.list {
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 0px;
+  
+  ul {
+    margin-left: $thumb-dimension + 2 * $thumb-padding;
+  }
+
+  li {
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+}
+
+.content {
+  background-color: #cccccc;
+  margin: 2px;
+  &.parent {
+    cursor: pointer;
+
+    &::after {
+      content: "\2BC8";
+    }
+  
+    &.expanded {
+      &::after {
+        content: "\2BC6";
+      }
+    }
+  }
+
+  .title {
+    padding: $thumb-padding;
+    vertical-align: middle;
+  }
+
+  img {
+    height: $thumb-dimension;
+    width: $thumb-dimension;
+    padding: $thumb-padding;
+    vertical-align: middle;
+  }
+}

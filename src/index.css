@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2"); }
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px; }
+
+#root {
+  padding: 5px;
+  width: 400px; }
