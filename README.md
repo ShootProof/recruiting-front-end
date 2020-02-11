@@ -1,44 +1,24 @@
-# Overview
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Here at ShootProof, we prefer to have a good idea of a candidate's technical
-knowledge and experience before proceeding with our in-office interview portion
-of the process.  We believe that the technical exercise below will illustrate a
-candidate's approach to building reusable components using JavaScript and CSS.
-# Guidelines
+## Available Scripts
 
-Goal: Create a navigable tree component using our provided set of test data.
+In the project directory, you can run:
+### `yarn install`
+### `yarn start`
 
-The test data is a flat structure with parent ID pointers. You may choose to use
-the data structure as-is, or have a function transform the data structure into
-some other structure, but treat the test data as a given.
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-- This exercise should take you a few hours to complete, but you are encouraged to take as much time as you feel is necessary.
-- Feel free to make this component as cool/interesting as you'd like as long as it meets the functional requirements. This is your opportunity to show off your skills and knowledge.
-- We'd prefer to see usage of a modern component-based JavaScript framework of your choice (React, Vue, Angular, etc.), but we will consider vanilla submissions as well
-- You should utilize ES6+ syntax (or Typescript) targeting modern browsers
-- You should avoid using any runtime dependencies which provide a similar tree-like structure
-- Keep in mind that this submission should reflect what your code would look like in a production-like environment.
-- We'd prefer you to submit the exercise as a pull request to this repository, but will also accept a .ZIP archive or link to an online code editor (JSFiddle, etc.)
-  - A working, compiled set of code in a single directory that can be opened in a browser
-  - Instructions for running any build or test steps along with any any clarification or justification you'd like to provide
-  - All source code
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-# Functional Requirements
+### `yarn build`
 
-- A complete submission will:
-  - Only show the expander UI element for nodes that contain children
-  - Only turn the cursor into a pointer for nodes with children
-  - Click a node to expand it
-  - Use of a webfont (any font of your choice)
-  - Text and icons should be vertically centered within each tree node
-  - Images should have data-driven alt text shown on hover
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The end result should look something similar to what's shown below:
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-![Working Example of Tree Component](/example.gif)
-
-# Test Data
-
-You will find the test data in this repository under `testdata.json`. You can
-copy it into your code directly, or request the content of the test data
-directly from GitHub if you prefer.
+You can run serve -s build to run the built project
+Open [http://localhost:5000](http://localhost:5000)
