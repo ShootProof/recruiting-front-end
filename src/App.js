@@ -12,6 +12,7 @@ const findChildren = (item) => {
       if(currentItem.parent !== null){
         // console.log('finding children of child: ', currentItem.id);
         currentItem.children = findChildren(currentItem);
+        currentItem.childrenVisible = true;
       }
       total.push(currentItem)
     }
@@ -24,15 +25,22 @@ function App() {
   const formattedData = data.reduce((total, currentItem) => {
     if(currentItem.parent === null){
       currentItem.children = findChildren(currentItem);
+      currentItem.childrenVisible = true;
       total.push(currentItem);
     }
     return total;
   }, []);
 
-  console.log('formattedData: ', formattedData);
+  // console.log('formattedData: ', formattedData);
+
+  const renderMe = () => {
+    return formattedData.map(item => {
+      return <Expander key={`${item.id}_top`} data={[item]} level={0} />
+    })
+  }
   return (
     <div className="App">
-      <Expander key={'top'} data={formattedData} level={0} />
+      {renderMe()}
     </div>
   );
 }
