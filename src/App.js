@@ -1,16 +1,15 @@
 import React from 'react';
 import './App.css';
-import Expander from './components/expander.js';
+import Expander from './components/Expander.js';
 const data = require('./testdata.json');
 
+// this recursively finds all children of a given node
+// while gathering this information, all children are put 
+// into a child array on the node and sets a default visibility flag
 const findChildren = (item) => {
-  // console.log('finding children of: ', item.id);
   return data.reduce((total, currentItem) => {
-    // console.log(`${item.id} - ${currentItem.parent}`);
     if(item.id === currentItem.parent){
-      // console.log('child: ', currentItem);
       if(currentItem.parent !== null){
-        // console.log('finding children of child: ', currentItem.id);
         currentItem.children = findChildren(currentItem);
         currentItem.childrenVisible = true;
       }
@@ -21,7 +20,7 @@ const findChildren = (item) => {
 }
 
 function App() {
-  // console.log('data: ', data);
+  // start by grabbing only top level nodes, and find their children recursively
   const formattedData = data.reduce((total, currentItem) => {
     if(currentItem.parent === null){
       currentItem.children = findChildren(currentItem);
@@ -31,16 +30,13 @@ function App() {
     return total;
   }, []);
 
-  // console.log('formattedData: ', formattedData);
-
-  const renderMe = () => {
-    return formattedData.map(item => {
-      return <Expander key={`${item.id}_top`} data={[item]} level={0} />
-    })
-  }
   return (
     <div className="App">
-      {renderMe()}
+      {
+        formattedData.map(item => {
+          return <Expander key={`${item.id}_top`} data={[item]} level={0} />
+        })
+      }
     </div>
   );
 }

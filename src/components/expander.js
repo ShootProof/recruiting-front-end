@@ -1,4 +1,6 @@
 import React from 'react';
+import Thumbnail from './Thumbnail.js';
+import './Expander.css';
 
 class Expander extends React.Component {
     constructor(props){
@@ -11,8 +13,6 @@ class Expander extends React.Component {
 
     onClickHandler = (item) => {
         if(item.children.length > 0){
-            // console.log('this is item: ', item);
-            // console.log(`onClick: setting ${item.name} from ${item.childrenVisible} to ${!item.childrenVisible}`);
             this.setState({
                 childrenVisible: !this.state.childrenVisible
             });
@@ -20,30 +20,41 @@ class Expander extends React.Component {
     };
 
     render() {
-        // console.log('props: ', props.data);
-        const styles = {
-            'backgroundColor': '#f2f2f2',
-            'marginLeft': this.props.level * 40,
-            'marginBottom': '5px',
-            'height': '25px',
-            'borderRadius': '3px',
-            'padding': '0 10px',
-            'display': 'flex',
-            'alignItems': 'center',
-            'cursor': 'pointer'
+        let styles = {
+            'marginLeft': this.props.level * 40
         };
 
         return this.props.data.map(item => {
+            let renderableChildren = null;
+            let renderArrow = null;
+
             if(item.children.length > 0 && this.state.childrenVisible){
-                return (
-                    <React.Fragment key={item.id + 'fragment'}>
-                        <div key={`${item.id}_parent`} style={styles} onClick={() => this.onClickHandler(item)}>{item.name}</div>
-                        <Expander key={item.id + item.parent} data={item.children} level={this.props.level + 1}/>
-                    </React.Fragment>
-                );
-            } else {
-                return <div key={`${item.id}_leaf`} style={styles} onClick={() => this.onClickHandler(item)}>{item.name} </div>
+                // if there are children to render, we will render them recursively
+                renderableChildren = <Expander key={item.id + item.parent} data={item.children} level={this.props.level + 1}/>;
+                renderArrow = <i className="material-icons">arrow_drop_down</i>;
+                styles = Object.assign({}, styles, { 'cursor': 'pointer'});
+            } else if(item.children.length > 0 && !this.state.childrenVisible){
+                renderArrow = <i className="material-icons">arrow_right</i>;
             }
+
+            return (
+                <React.Fragment key={item.id + 'fragment'}>
+                    <div
+                        key={`${item.id}_parent`}
+                        className='expander'
+                        style={styles}
+                        onClick={() => this.onClickHandler(item)}
+                    >
+                        <Thumbnail
+                            alt={item.thumbnail.description}
+                            src={item.thumbnail.href}
+                        />
+                        {item.name}
+                        {renderArrow}
+                    </div>
+                    {renderableChildren}
+                </React.Fragment>
+            );
         });
     }  
 }
