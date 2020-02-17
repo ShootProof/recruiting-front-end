@@ -1,5 +1,7 @@
 # Setup
 
+If you use `nvm`, you can run `nvm use` in the root to sync with the one I'm using here (12.16.0 - current LTS version).
+
 Run `npm start` to launch a browser with this code. 
 
 # Overview
