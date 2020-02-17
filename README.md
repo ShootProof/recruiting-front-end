@@ -1,3 +1,7 @@
+# Setup
+
+Run `npm start` to launch a browser with this code. 
+
 # Overview
 
 Here at ShootProof, we prefer to have a good idea of a candidate's technical
