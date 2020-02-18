@@ -1,0 +1,37 @@
+.aboutMe {
+    .details {
+        color: #666666;
+        font-size: 20px;
+        font-weight: 400;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    .headingDetails {
+        color: #666666;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    p, ul {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .headshotWrapper{
+        height: 160px;
+        width: 160px;
+        border-radius: 150px;
+        overflow: hidden;
+        border: 8px solid rgb(42, 89, 105);
+        margin: 0 auto;
+        
+        .headshot {
+            height: auto;
+            width: 100%;
+            background-size: cover;
+            margin-top: -30px;
+        }
+    }
+}
