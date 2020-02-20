@@ -1,44 +1,68 @@
-# Overview
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Here at ShootProof, we prefer to have a good idea of a candidate's technical
-knowledge and experience before proceeding with our in-office interview portion
-of the process.  We believe that the technical exercise below will illustrate a
-candidate's approach to building reusable components using JavaScript and CSS.
-# Guidelines
+## Available Scripts
 
-Goal: Create a navigable tree component using our provided set of test data.
+In the project directory, you can run:
 
-The test data is a flat structure with parent ID pointers. You may choose to use
-the data structure as-is, or have a function transform the data structure into
-some other structure, but treat the test data as a given.
+### `npm start`
 
-- This exercise should take you a few hours to complete, but you are encouraged to take as much time as you feel is necessary.
-- Feel free to make this component as cool/interesting as you'd like as long as it meets the functional requirements. This is your opportunity to show off your skills and knowledge.
-- We'd prefer to see usage of a modern component-based JavaScript framework of your choice (React, Vue, Angular, etc.), but we will consider vanilla submissions as well
-- You should utilize ES6+ syntax (or Typescript) targeting modern browsers
-- You should avoid using any runtime dependencies which provide a similar tree-like structure
-- Keep in mind that this submission should reflect what your code would look like in a production-like environment.
-- We'd prefer you to submit the exercise as a pull request to this repository, but will also accept a .ZIP archive or link to an online code editor (JSFiddle, etc.)
-  - A working, compiled set of code in a single directory that can be opened in a browser
-  - Instructions for running any build or test steps along with any any clarification or justification you'd like to provide
-  - All source code
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-# Functional Requirements
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-- A complete submission will:
-  - Only show the expander UI element for nodes that contain children
-  - Only turn the cursor into a pointer for nodes with children
-  - Click a node to expand it
-  - Use of a webfont (any font of your choice)
-  - Text and icons should be vertically centered within each tree node
-  - Images should have data-driven alt text shown on hover
+### `npm test`
 
-The end result should look something similar to what's shown below:
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-![Working Example of Tree Component](/example.gif)
+### `npm run build`
 
-# Test Data
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-You will find the test data in this repository under `testdata.json`. You can
-copy it into your code directly, or request the content of the test data
-directly from GitHub if you prefer.
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

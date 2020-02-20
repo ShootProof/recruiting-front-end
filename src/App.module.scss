@@ -1,0 +1,30 @@
+.appContainer {
+  font-family: 'Raleway', sans-serif;
+
+  main {
+    width: 1200px;
+    margin: 40px auto;
+
+    h1 {
+      color:rgb(42, 89, 105);
+      font-size: 36px;
+      font-weight: 400;
+      text-align: center;
+      font-family: 'Abel', sans-serif;
+    }
+
+    h2 {
+        color:rgb(42, 89, 105);
+        font-size: 28px;
+        font-weight: 600;
+        font-family: 'Abel', sans-serif;
+    }
+
+    h3 {
+        color: #333333;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 0 20px;
+    }
+  }
+}
